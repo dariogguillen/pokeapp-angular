@@ -7,14 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { PokemonlistComponent } from './components/pokemonlist/pokemonlist.component';
 
-import { DataService } from './service/data.service';
+import { PokemonService } from './service/pokemon.service';
+import { PokemonitemComponent } from './components/pokemonitem/pokemonitem.component';
+import { SelectGenComponent } from './components/select-gen/select-gen.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    PokemonlistComponent,
+    PokemonitemComponent,
+    SelectGenComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +30,7 @@ import { DataService } from './service/data.service';
     FormsModule,
     HttpModule
   ],
-  providers: [DataService],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

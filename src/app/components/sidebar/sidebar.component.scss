@@ -3,5 +3,8 @@ nav {
   height: 100%;
   .nav__item {
     padding: 15px 5px;
+    .active {
+      background: #fff;
+    }
   }
 }

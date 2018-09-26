@@ -1,0 +1,38 @@
+.gen-container {
+  width: 100%;
+  height: 100%;
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-gen {
+    width: 100%;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px 10px;
+      li {
+        width: 45%;
+        list-style: none;
+        text-decoration: none;
+        a {
+          text-decoration: none;
+          span {
+            border-radius: 5px;
+            display: block;
+            height: 50px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Cabin Condensed', sans-serif;
+            color: black;
+            &:hover {
+              text-decoration: underline;
+              background: rgba(0, 0, 0, 0.167);
+            }
+          }
+        }
+      }
+    }
+  }
+}
