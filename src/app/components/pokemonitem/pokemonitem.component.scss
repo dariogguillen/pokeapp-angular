@@ -1,11 +1,24 @@
 .pokemon-item {
-  width: 150px;
-  padding: 5px;
-  img {
-    display: block;
-    margin: 0 auto;
+  width: 170px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
   }
-  p {
-    text-align: center;
+  a {
+    text-decoration: none;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    p {
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 0 0 10px 10px;
+      width: 100%;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
 }

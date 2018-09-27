@@ -9,16 +9,30 @@ import { Pokemon } from '../model/pokemon';
 export class PokemonService {
   private baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
-  getPokemons () {
-    return this.http.get(`${this.baseUrl}`)
+  getPokemons() {
+    return this.http
+      .get(`${this.baseUrl}`)
       .toPromise()
-      .then(response => response.json().results.map(pokemon => Pokemon.parse(pokemon)));
+      .then(response =>
+        response.json().results.map(pokemon => Pokemon.parse(pokemon))
+      );
   }
-  getPokemonDetail (id) {
-    return this.http.get(`${this.baseUrl}${id}/`)
+  getPokemonDetail(id) {
+    return this.http
+      .get(`${this.baseUrl}${id}/`)
       .toPromise()
-      .then(pokemon => pokemon.json());
+      .then(response => response.json())
+      .then(pokemon => {
+        return {
+          id: pokemon.id,
+          name: pokemon.name,
+          imageUrl: pokemon.sprites.front_default,
+          types: pokemon.types,
+          weight: pokemon.weight,
+          abilities: pokemon.abilities
+        };
+      });
   }
 }

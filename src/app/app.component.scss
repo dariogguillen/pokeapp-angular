@@ -8,14 +8,17 @@
     .side{
       width: 100px;
       height: 100%;
-      background-color: rgb(255, 25, 0);
+      background-color: rgb(255, 61, 40);
     }
     .content {
       width: calc(100vw - 100px);
       height: 100%;
       overflow: auto;
       padding: 20px 30px;
-
+      background-image: url(../assets/images/164641415-pokemon-wallpapers.jpg);
+      background-position: bottom right;
+      // background-size: auto 100%;
+      background-repeat: no-repeat;
     }
   }
 }
